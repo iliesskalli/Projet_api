@@ -1,0 +1,46 @@
+#-----------------------------------------------------------
+# Configuration
+#-----------------------------------------------------------
+
+Options +FollowSymlinks
+
+#Module réecriture URL 
+
+RewriteEngine on 
+ 
+#--------------------------------------READ----------------------------------------------------
+
+#réécriture de l'URL lecture de Produits                                       
+RewriteRule ^Produit$ http://localhost/API/Produits/lire [L] 
+
+
+#réécriture de l'URL lecture de Categories  
+RewriteRule ^Categorie$ http://localhost/API/Categories/lire [L] 
+
+
+#réécriture de l'URL lecture d'utilisateurs  
+RewriteRule ^Utilisateur$ http://localhost/API/Utilisateurs/lire [L]
+
+#réécriture de l'URL lecture des commandes  
+RewriteRule ^Commande$ http://localhost/API/Commande/lire [L]
+
+#réécriture de l'URL lecture des Tokens  
+RewriteRule ^Token$ http://localhost/API/Token/Generation [L]
+
+
+#--------------------------------------READ----------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

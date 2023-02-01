@@ -1,0 +1,294 @@
+@charset "ISO-8859-1";
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    font-family: "Open Sans";
+}
+
+ 
+.conteneur {
+    margin: 0px;
+    padding: 0px;
+    width: 100% ;
+    font-size : 0px;
+}
+
+ 
+header {
+    height: 210px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 10;
+}
+
+
+ 
+
+main {
+    margin: 0px;
+    padding: 0px;
+    min-height: 600px;
+    background-color: #f0f0f0;
+    font-size: 0px;
+    margin-top: 200px;
+}
+
+
+ 
+.gauche {
+    display: inline-block;
+    background-color: #fff0f0;
+    width: 20%;
+    vertical-align: top;
+    font-size: 15px;
+}
+
+ 
+.droite {
+    display: inline-block;
+    width: 80%;
+    font-size: 15px;
+    vertical-align: top;
+}
+
+
+ 
+footer {
+    background-color: skyblue;
+    height: 120px;
+    color: white;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+footer p {
+    padding: 15px;
+    padding-top: 25px;
+}
+
+
+.logo {
+    top: 0px;
+    left:0px;
+    position: absolute;
+    font-size: 50px;
+    color: white;
+    margin-left: 18px;
+    margin-top: 18px;
+}
+ 
+.bandeau {
+    height: 180px;
+    background: linear-gradient(rgba(0, 0, 150, 0.3), rgba(0, 0, 200, 0.6));
+}
+
+
+ 
+nav.menuPrincipal {
+    background-color: #b3b3b3;
+    font-size: 0px;
+    text-align: right;
+    height: 50px;
+    padding: 0px;
+    margin: 0px;
+}
+
+nav.menuPrincipal ul {
+    display: inline-block;
+    list-style: none;
+}
+
+nav.menuPrincipal ul li {
+    display: inline-block;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: Helvetica;
+}
+
+nav.menuPrincipal ul li a {
+    display: table-cell;
+    text-decoration: none;
+    color: white;
+    text-align: center;
+    vertical-align: middle;
+    height: 50px;
+    width: 140px;
+ 
+}
+
+nav.menuPrincipal ul li a:hover {
+    color: grey;
+ 
+}
+
+nav.menuPrincipal ul li .actif {
+    display: table-cell;
+    background-color: ivory;
+    color: black;
+    text-align: center;
+    vertical-align: middle;
+    height: 50px;
+    width: 140px;
+}
+
+ 
+.texteAccueil {
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 20px;
+    font-size: 17px;
+}
+
+.texteAccueil h1 {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-align: center;
+}
+
+.texteAccueil p {
+    padding-top: 20px;
+    text-align: justify;
+}
+
+.images {
+    text-align: center;
+    padding-top: 30px;
+}
+
+.images img {
+    height: 150px;
+    margin: 10px;
+    padding-bottom: 100px;
+}
+
+
+ 
+a.anchor {
+    display: block;
+    position: relative;
+    top: -200px;
+    visibility: hidden;
+}
+
+.sidenav {
+    position: fixed;
+    top: 200px;
+    left: 0px;
+}
+
+.sidenav .titreListe {
+    color: black;
+    padding: 30px;
+    font-weight: bold;
+    font-size: 22px;
+}
+
+.sidenav ul {
+    list-style: none;
+    padding-left: 40px;
+    font-size: 16px;
+    line-height: 35px;
+}
+
+.sidenav li a {
+    text-decoration: none;
+    color: grey;
+}
+
+.sidenav li a:hover {
+    color: blue;
+}
+
+ 
+.contentConnexion {
+    background-color: #f0f0f0;
+    font-size: 0px;
+    text-align: center;
+    vertical-align: middle;
+    padding: 150px;
+    height: auto;
+}
+
+.connexion {
+    display: inline-block;
+    font-size: 15px;
+    width: 400px;
+    height: inherit;
+    border: 1px solid black;
+}
+
+.connexion .titre {
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 15px;
+    background-color: skyblue;
+}
+
+.connexion .ligne {
+    padding: 15px;
+    text-align: center;
+}
+
+.connexion .ligne label {
+    display: inline-block;
+    width: 150px;
+    text-align: center;
+    padding-right: 10px;
+    font-weight: bold;
+}
+
+.connexion .ligne input {
+    display: inline-block;
+    width: 200px;
+}
+
+ 
+
+input[type=text] , [type=password] {
+    width: 200px;
+    padding: 5px 5px;
+    margin-right: 8px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=submit]{
+    font-family: "Open Sans";
+    font-weight: bold;
+    padding : 5px 10px;
+    border-radius: 4px;
+    box-sizing: border-box;
+    color: white;
+    background-color: rgba(0, 0, 150, 0.3);
+}
+
+
+/* Message bienvenue utilisateur */
+.bienvenue{
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    text-align: center;
+    margin-top: 60px;
+    margin-right: 11px;
+}
+
+.bienvenue a {
+    text-decoration: none;
+}
+
+.bienvenue p{
+    color: white;
+    font-size: 25px;
+}
+
+ 
