@@ -1,6 +1,6 @@
 -- phpMyAdmin SQL Dump
 -- version 5.1.1
--- https://www.phpmyadmin.net/
+-- https://www.phpmyadmin.net/ 
 --
 -- Hôte : 127.0.0.1:3306
 -- Généré le : lun. 30 jan. 2023 à 19:22
