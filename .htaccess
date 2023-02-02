@@ -1,4 +1,5 @@
 #-----------------------------------------------------------
+<<<<<<< HEAD
 #Configuration
 #----------------------------------------------------------- 
 Options +FollowSymlinks +IncludesNoExec +Includes +ExecCGI  
@@ -19,6 +20,31 @@ RewriteEngine on
 
 #réécriture de l'URL création de produits  
  
+=======
+# Configuration
+#----------------------------------------------------------- 
+
+  
+ 
+Options +FollowSymlinks +IncludesNoExec +Includes +ExecCGI  
+  
+#Module réecriture URL 
+ 
+RewriteEngine on
+
+<Limit GET POST PUT OPTIONS DELETE PATCH HEAD>
+    Order allow,deny
+    Allow from all
+</Limit>
+<LimitExcept GET POST PUT OPTIONS DELETE PATCH HEAD>
+    Order deny,allow
+    Deny from all
+</LimitExcept>
+#--------------------------------------CREATE----------------------------------------------------
+
+#réécriture de l'URL création de produits  
+ 
+>>>>>>> 552802b8b9bbe1a4699ec9454743e5ff57b0e1be
 RewriteCond %{REQUEST_METHOD} =POST
 RewriteRule ^Produit$ http://localhost/API/Produits/Creer [L] 
 

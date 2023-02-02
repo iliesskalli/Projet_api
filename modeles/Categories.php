@@ -6,7 +6,7 @@ class Categories{
     public $id;
     public $nom;
     public $description;
-    public $date_creation;  
+    public $date_creation;   
 
     /**
      * @param $db

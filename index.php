@@ -9,7 +9,7 @@ session_start()?>
 			@import url(styles/web.css);
 		</style>
 	</head>
-	<body>
+	<body> 
 		<?php
 			include_once 'controleurs/controleurPrincipal.php';
 		?>

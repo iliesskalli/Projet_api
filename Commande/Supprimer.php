@@ -14,7 +14,7 @@ header("Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers
 
 if($_SERVER['REQUEST_METHOD'] == 'DELETE'){
 
-
+ 
     include_once '../configs/Database.php'; 
     include_once '../modeles/Commandes.php';
 

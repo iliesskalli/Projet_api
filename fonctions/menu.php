@@ -6,7 +6,7 @@
  * $composants liste des items coposant le menu
  */
 class Menu{
-	private $style;
+	private $style; 
 	private $composants = array();
 
 	/**

@@ -10,7 +10,7 @@ header("Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers
 //**************************** **************************** **************************** **************************** 
 
 //Si on est en PUT 
-if($_SERVER['REQUEST_METHOD'] == 'PUT'){
+if($_SERVER['REQUEST_METHOD'] == 'PUT'){ 
 
 
     include_once '../configs/Database.php';
