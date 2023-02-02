@@ -7,7 +7,7 @@ function tableauHtml($tab,$entete , $classEntete, $classTab, $classLigne){
         $res .= "<tr>";
         foreach ($entete as $cellule){
             $res .= "<th class='" . $classEntete . "'>" . $cellule . "</th>";
-        }
+        } 
         $res .= "</tr>";
     }
     if(count($tab)>0){
