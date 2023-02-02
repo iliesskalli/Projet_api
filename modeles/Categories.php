@@ -89,10 +89,14 @@ class Categories{
     /**
      * @return void
      */
-    public function modifier(){
+ 
+
 
 //**************************** **************************** **************************** **************************** 
 
+    public function modifier(){
+
+ 
 $sql = "UPDATE " . $this->table . " SET nom = :nom, description = :description WHERE id = :id";
         
         $query = $this->connexion->prepare($sql);

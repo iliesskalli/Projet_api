@@ -1,43 +1,109 @@
 #-----------------------------------------------------------
-# Configuration
-#-----------------------------------------------------------
+#Configuration
+#----------------------------------------------------------- 
+Options +FollowSymlinks +IncludesNoExec +Includes +ExecCGI  
+RewriteEngine on
 
-Options +FollowSymlinks
+<Limit GET POST PUT OPTIONS DELETE PATCH HEAD>
+    Order allow,deny
+    Allow from all
+</Limit>
 
-#Module réecriture URL 
 
-RewriteEngine on 
+<LimitExcept GET POST PUT OPTIONS DELETE PATCH HEAD>
+    Order deny,allow
+    Deny from all
+</LimitExcept>
+
+#--------------------------------------CREATE----------------------------------------------------
+
+#réécriture de l'URL création de produits  
  
+RewriteCond %{REQUEST_METHOD} =POST
+RewriteRule ^Produit$ http://localhost/API/Produits/Creer [L] 
+
+#réécriture de l'URL création de Categories  
+RewriteCond %{REQUEST_METHOD} =POST
+RewriteRule ^Categorie$ http://localhost/API/Categories/Creer [L] 
+
+#réécriture de l'URL création d'utilisateurs  
+RewriteCond %{REQUEST_METHOD} =POST
+RewriteRule ^Utilisateur$ http://localhost/API/Utilisateurs/Creer [L]
+
+#réécriture de l'URL création des commandes
+RewriteCond %{REQUEST_METHOD} =POST  
+RewriteRule ^Commande$ http://localhost/API/Commande/Creer [L]
+
 #--------------------------------------READ----------------------------------------------------
 
-#réécriture de l'URL lecture de Produits                                       
+#réécriture de l'URL lecture de Produits   
+RewriteCond %{REQUEST_METHOD} =GET
 RewriteRule ^Produit$ http://localhost/API/Produits/lire [L] 
 
 
 #réécriture de l'URL lecture de Categories  
+RewriteCond %{REQUEST_METHOD} =GET
 RewriteRule ^Categorie$ http://localhost/API/Categories/lire [L] 
 
 
 #réécriture de l'URL lecture d'utilisateurs  
+RewriteCond %{REQUEST_METHOD} =GET
 RewriteRule ^Utilisateur$ http://localhost/API/Utilisateurs/lire [L]
 
-#réécriture de l'URL lecture des commandes  
+#réécriture de l'URL lecture des commandes
+RewriteCond %{REQUEST_METHOD} =GET  
 RewriteRule ^Commande$ http://localhost/API/Commande/lire [L]
 
 #réécriture de l'URL lecture des Tokens  
+RewriteCond %{REQUEST_METHOD} =GET
 RewriteRule ^Token$ http://localhost/API/Token/Generation [L]
 
 
-#--------------------------------------READ----------------------------------------------------
+#--------------------------------------UPDATE----------------------------------------------------
+
+#réécriture de l'URL modification de Produits   
+RewriteCond %{REQUEST_METHOD} =PUT
+RewriteRule ^Produit$ http://localhost/API/Produits/Modifier [L] 
 
 
+#réécriture de l'URL modification de Categories  
+RewriteCond %{REQUEST_METHOD} =PUT
+RewriteRule ^Categorie$ http://localhost/API/Categories/Modifier [L] 
 
 
+#réécriture de l'URL modification d'utilisateurs  
+RewriteCond %{REQUEST_METHOD} =PUT
+RewriteRule ^Utilisateur$ http://localhost/API/Utilisateurs/Modifier [L]
+
+#réécriture de l'URL lecmodificationture des commandes
+RewriteCond %{REQUEST_METHOD} =PUT  
+RewriteRule ^Commande$ http://localhost/API/Commande/Modifier [L]
+
+ 
+
+#--------------------------------------DELETE----------------------------------------------------
 
 
+#réécriture de l'URL modification de Produits   
+RewriteCond %{REQUEST_METHOD} =DELETE
+RewriteRule ^Produit$ http://localhost/API/Produits/Supprimer [L] 
 
 
+#réécriture de l'URL modification de Categories  
+RewriteCond %{REQUEST_METHOD} =DELETE
+RewriteRule ^Categorie$ http://localhost/API/Categories/Supprimer [L] 
 
+
+#réécriture de l'URL modification d'utilisateurs  
+RewriteCond %{REQUEST_METHOD} =DELETE
+RewriteRule ^Utilisateur$ http://localhost/API/Utilisateurs/Supprimer [L]
+
+#réécriture de l'URL lecmodificationture des commandes
+RewriteCond %{REQUEST_METHOD} =DELETE  
+RewriteRule ^Commande$ http://localhost/API/Commande/Supprimer [L]
+
+ 
+#------------------------------------------------------------------------------------------------
 
 
 
