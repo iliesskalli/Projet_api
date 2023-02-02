@@ -8,8 +8,16 @@ Options +FollowSymlinks +IncludesNoExec +Includes +ExecCGI
   
 #Module réecriture URL 
  
-RewriteEngine on 
- 
+RewriteEngine on
+
+<Limit GET POST PUT OPTIONS DELETE PATCH HEAD>
+    Order allow,deny
+    Allow from all
+</Limit>
+<LimitExcept GET POST PUT OPTIONS DELETE PATCH HEAD>
+    Order deny,allow
+    Deny from all
+</LimitExcept>
 #--------------------------------------CREATE----------------------------------------------------
 
 #réécriture de l'URL création de produits  
@@ -99,19 +107,6 @@ RewriteRule ^Commande$ http://localhost/API/Commande/Supprimer [L]
 
  
 #------------------------------------------------------------------------------------------------
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
