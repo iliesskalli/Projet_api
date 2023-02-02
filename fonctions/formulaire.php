@@ -3,7 +3,7 @@ class Formulaire{
 	private $method;
 	private $action;
 	private $nom;
-	private $style;
+	private $style; 
 	private $formulaireToPrint;
 
 	private $ligneComposants = array();
